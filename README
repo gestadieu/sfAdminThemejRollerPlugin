@@ -13,7 +13,7 @@ modified files:
 add web/ for css and js
 use jQuery 1.3.2 jQuery UI 1.7.2 by default
 
-jQuery UI: tab, modal window
+jQuery UI: Tab, Dialog (draggable and resizable preferable)
 
 
 css_reset from Blueprint 
