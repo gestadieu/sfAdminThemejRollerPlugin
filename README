@@ -1,22 +1,67 @@
+sfAdminThemejRollerPlugin
+=========================
 
-modified files:
-	template/templates:
-		_assets.php
-		_pagination.php
-		_list.php
-		_list_actions.php
-		indexSuccess.php
-		_form.php
-		_form_fieldset.php
-		_filters.php
-		
-add web/ for css and js
-use jQuery 1.3.2 jQuery UI 1.7.2 by default
+The `sfAdminThemejRollerPlugin` packages a new admin generator theme based on jQuery UI ThemeRoller (http://jqueryui.com/themeroller/).
 
-jQuery UI: Tab, Dialog (draggable and resizable preferable)
+This plugin allows to change the default admin generator theme to one based on the theme roller from jQuery UI team. 
+It is very convenient to change themes and keep UI consistency all around or even create your own theme.
+
+Installation
+------------
+
+  * Install the plugin
+
+        $ symfony plugin:install sfAdminThemejRollerPlugin --stability=beta
+
+  * Clear the cache
+
+        $ symfony cache:clear
+
+How to use it
+-------------
+
+Generate an admin generator:
+{{{
+	./symfony --theme=jroller doctrine:generate-admin
+}}}
+
+if you already have an admin generator, you can simply change the theme inside your generator.yml
+{{{
+	theme: jroller
+}}}
+
+Configuration
+-------------
+
+You can use your own jQuery/jQueryUI and your own theme (based on ThemeRoller) and configure all this inside your app.yml:
+{{{
+	sf_admin_theme_jroller_plugin:
+	    web_dir:      /sfAdminThemejRollerPlugin # specify specific folder where to pick your jquery stuff, ui and themes.
+	    use_jquery:   true # default. use the packaged jquery/UI
+	    theme:        redmond # default. 
+	    css_reset:    true # default. reset default css (from Blueprint CSS)
+}}}
+
+To add icons on your buttons/links you can use those proposed by ThemeRoller and include them in your generator.yml:
+{{{
+	actions:
+		_new: { ui-icon: plus }
+	object_actions:
+		_edit: { ui-icon: pencil }
+}}}
+
+Note: you only need to use the specific part of each icon, not the all name, e.g. 'ui-icon-plus'.
+
+Links
+-----
+	* [jQuery library](http://jquery.com/)
+	* [jQuery UI](http://jqueryui.com/)
+	* [jQuery UI ThemeRoller](http://jqueryui.com/themeroller/)
 
 
-css_reset from Blueprint 
-
+TODO
+----
+- fix bugs (no kidding ;-)
+- clean up css
 Export to CSV http://boedesign.com/2008/07/02/database-csv/
 Import CSV to DB http://boedesign.com/2008/02/20/csv-2-php-2-mysql-insert/

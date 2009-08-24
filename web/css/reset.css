@@ -20,6 +20,16 @@ blockquote:before, blockquote:after, q:before, q:after {content:"";}
 blockquote, q {quotes:"" "";}
 a img {border:none;}
 
+
+
+/* default sf admin generator container */
+#sf_admin_container {
+	width: 90%;
+	margin: 0 auto;
+	font-size: 10px;
+}
+#sf_admin_container ul { margin: 0px; padding: 0px;}
+
 h1 {
 	font-size: 2em;
 }

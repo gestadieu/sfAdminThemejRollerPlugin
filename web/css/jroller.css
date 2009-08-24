@@ -1,11 +1,3 @@
-/* default sf admin generator container */
-#sf_admin_container {
-	width: 90%;
-	margin: 0 auto;
-	font-size: 10px;
-}
-#sf_admin_container ul { margin: 0px; padding: 0px;}
-
 /* buttons  styling */
 .sf_button { 
 /*	clear:left; margin:0 4px 40px 20px; padding: .4em 1em; text-decoration:none !important; cursor:pointer; position: relative; text-align: center; zoom: 1; */
@@ -111,7 +103,6 @@ button.sf_button { width: auto; overflow: visible;}
 }
 
 .sf_admin_list caption {
-
 	width: 100%; 
 	padding: 4px;
 }
@@ -181,17 +172,6 @@ button.sf_button { width: auto; overflow: visible;}
 
 /* list styling */
 
-/*.sf_admin_pagination {
-	float: right;
-	font-size: .8em;
-	
-}
-
-.sf_admin_pagination a {
-	text-decoration: none;
-	color: #649DFF;
-}
-*/
 .sf_admin_actions_block {
 	text-align:right;
 	margin: 10px 0 10px 0;
