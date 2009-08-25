@@ -25,10 +25,9 @@ class UIHelper
 	
 	public static function addIcon($params)
 	{
-		sfLoader::loadHelpers(array('Tag'));
 		if (isset($params['ui-icon']) && $params['ui-icon'] != '')
 		{
-			return content_tag('span','','class=ui-icon ui-icon-'.$params['ui-icon']);
+			return '<span class="ui-icon ui-icon-'.$params['ui-icon'].'"></span>';
 		}
 	}
 	
