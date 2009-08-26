@@ -9,6 +9,8 @@ is only targeting the actual element of the admin generator (table, forms...), i
 
 Here are some screenshots: [Table list and themes](http://lh5.ggpht.com/_HlYBk55Czxc/SovPBjZPmsI/AAAAAAAAAyw/sp28Wi_hFCw/jroller-list-themes.png?imgmax=800) | [Filters and action menu](http://lh6.ggpht.com/_HlYBk55Czxc/SpIBG_3Mw4I/AAAAAAAAAy8/6YlRs4ciikM/jroller-list-filters.png?imgmax=800) | [Form](http://lh4.ggpht.com/_HlYBk55Czxc/SpICgt-bCwI/AAAAAAAAAzI/m107vadkdJg/jroller-form.png?imgmax=800)
 
+This theme is working with Doctrine ORM but it should be very easy to adapt for Propel: inside the plugin rename the folder 'sfDoctrineModule' into 'sfPropelModule' and you should be ready to go.
+
 ## Installation
 
 1.Download and install the plugin
@@ -66,13 +68,17 @@ Note: you only need to use the specific part of each icon name, not the all name
 * [jQuery UI](http://jqueryui.com/)
 * [jQuery UI ThemeRoller](http://jqueryui.com/themeroller/)
 
+## Changelog
+
+* version 0.1.2: remove depreciated sfLoader inside UIHelper class. Add README.markdown.
+* version 0.1.1: README file fix and more documentation. Add [github repository](http://github.com/gestadieu/sfAdminThemejRollerPlugin/).
+* version 0.1.0: initial release
 
 ## TODO
 
 * fix bugs (no kidding ;-)
 * clean up css
 * add new features: show view, print view, export and , live search
-* get git and svn repositories for your great contributions
+* get svn repositories for your great contributions
 * setup a live demo
 * rule the world, do good not evil
-* make it works with Propel (so far it should be very easy since it does not really use ORM yet)
