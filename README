@@ -44,23 +44,24 @@ That's it! You are ready to use your new admin generator face.
 
 You can use your own jQuery/jQueryUI and your own theme (based on ThemeRoller) and configure all this inside your *app.yml*:
 
-		sf_admin_theme_jroller_plugin:
-	  	web_dir:      /sfAdminThemejRollerPlugin # specify your folder where to pick jquery and jquery UI.
-	    use_jquery:   true # default. use the packaged jquery/UI
-			theme_dir:		/sfAdminThemejRollerPlugin # default. change the theme directory
-	    theme:        redmond # default. 
-	    css_reset:    true # default. reset default css (from Blueprint CSS)
+	sf_admin_theme_jroller_plugin:
+		web_dir:      /sfAdminThemejRollerPlugin # specify your folder where to pick jquery and jquery UI.
+		use_jquery:   true # default. use the packaged jquery/UI
+		theme_dir:		/sfAdminThemejRollerPlugin # default. change the theme directory
+		theme:        redmond # default. 
+		css_reset:    true # default. reset default css (from Blueprint CSS)
 
 Note:
+
 * web_dir and use_jquery are usually working together, you will modify them if you want to use your own jQuery/UI files.
 * theme_dir and theme are working together. You modify them when you want to use another theme from the default one (redmond). Your theme file should be inside {theme_dir}/{theme}/ with the name 'jquery-ui.custom.css'
 
 To add icons on your buttons/links you can use those proposed by ThemeRoller and include them in your generator.yml:
 
-		actions:
-			_new: { ui-icon: plus }
-		object_actions:
-			_edit: { ui-icon: pencil }
+	actions:
+		_new: { ui-icon: plus }
+	object_actions:
+		_edit: { ui-icon: pencil }
 
 Note: you only need to use the specific part of each icon name, not the all name, e.g. for 'ui-icon-plus' you only type 'plus'.
 
@@ -73,7 +74,7 @@ Note: you only need to use the specific part of each icon name, not the all name
 
 ## Changelog
 
-* version 0.1.3: THIS VERSION BRAKES PREVIOUS app.yml config. Modify the app.yml to make it more in line with "standard" plugins and add one new variable: theme_dir to easily set external theme without changing jquery. Remove 2 themes to keep only one in the plugin (add your own in your web folder).
+* version 0.1.3: THIS VERSION BRAKES PREVIOUS app.yml config. Modify the app.yml to make it more in line with "standard" plugins and add one new parameter: theme_dir to easily set external theme without changing jquery. Remove 2 themes to keep only one in the plugin (add your own in your web folder).
 * version 0.1.2: remove depreciated sfLoader inside UIHelper class. Add README.markdown.
 * version 0.1.1: README file fix and more documentation. Add [github repository](http://github.com/gestadieu/sfAdminThemejRollerPlugin/).
 * version 0.1.0: initial release
@@ -83,6 +84,5 @@ Note: you only need to use the specific part of each icon name, not the all name
 * fix bugs (no kidding ;-)
 * clean up css
 * add new features: show view, print view, export and , live search
-* get svn repositories for your great contributions
 * setup a live demo
 * rule the world, do good not evil
