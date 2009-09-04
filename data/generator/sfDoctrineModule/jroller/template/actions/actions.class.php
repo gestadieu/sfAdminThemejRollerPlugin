@@ -56,4 +56,8 @@ class <?php echo $this->getGeneratedModuleName() ?>Actions extends sfActions
 <?php include dirname(__FILE__).'/../../parts/paginationAction.php' ?>
 
 <?php include dirname(__FILE__).'/../../parts/sortingAction.php' ?>
+
+<?php include dirname(__FILE__).'/../../parts/showAction.php' ?>
+
+
 }

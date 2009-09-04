@@ -28,12 +28,18 @@
 
   public function getEditActions()
   {
+		//  added show view
+	  // return <?php echo $this->asPhp(isset($this->config['edit']['actions']) ? $this->config['edit']['actions'] : array('_delete' => null, '_list' => null, '_show' => null, '_save' => null, '_save_and_add' => null)) ?>;
+  
     return <?php echo $this->asPhp(isset($this->config['edit']['actions']) ? $this->config['edit']['actions'] : array()) ?>;
 <?php unset($this->config['edit']['actions']) ?>
   }
 
   public function getListObjectActions()
   {
+		// =============== Added show view
+	  return <?php echo $this->asPhp(isset($this->config['list']['object_actions']) ? $this->config['list']['object_actions'] : array( '_show' => null, '_edit' => null, '_delete' => null)) ?>;
+  
     return <?php echo $this->asPhp(isset($this->config['list']['object_actions']) ? $this->config['list']['object_actions'] : array('_edit' => null, '_delete' => null)) ?>;
 <?php unset($this->config['list']['object_actions']) ?>
   }

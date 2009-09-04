@@ -9,6 +9,9 @@ $params['params'] = UIHelper::addClasses($params,'sf_button_inline ui-state-defa
 <?php elseif ('_edit' == $name): ?>
     <?php echo $this->addCredentialCondition('[?php echo $helper->linkToEdit($'.$this->getSingularName().', '.$this->asPhp($params).') ?]', $params) ?>
 
+<?php elseif ('_show' == $name): ?>
+    <?php  echo $this->addCredentialCondition('[?php echo $helper->linkToShow($'.$this->getSingularName().', '.$this->asPhp($params).') ?]', $params) ?>
+
 <?php else: ?>
     <li class="sf_admin_action_<?php echo $params['class_suffix'] ?>">
 			<?php $params['label'] .= UIHelper::addIcon($params); ?>

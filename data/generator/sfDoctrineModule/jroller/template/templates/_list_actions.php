@@ -4,6 +4,10 @@
 ?>
 <?php if ('_new' == $name): ?>
 <?php echo $this->addCredentialCondition('[?php echo $helper->linkToNew('.$this->asPhp($params).') ?]', $params)."\n" ?>
+
+<?php elseif ('_show' == $name): ?>
+    <?php echo $this->addCredentialCondition('[?php echo $helper->linkToShow($'.$this->getSingularName().', '.$this->asPhp($params).') ?]', $params) ?>
+
 <?php else: 
 $params['params'] = UIHelper::addClasses($params);
 ?>

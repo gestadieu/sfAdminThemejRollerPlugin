@@ -11,6 +11,9 @@
 <?php if ('_list' == $name): ?>
   <?php echo $this->addCredentialCondition('[?php echo $helper->linkToList('.$this->asPhp($params).') ?]', $params) ?>
 
+<?php elseif ('_show' == $name): ?>
+  <?php echo $this->addCredentialCondition('[?php echo $helper->linkToShow($form->getObject(), '.$this->asPhp($params).') ?]', $params) ?>
+
 <?php elseif ('_delete' == $name): ?>
   <?php echo $this->addCredentialCondition('[?php echo $helper->linkToDelete($form->getObject(), '.$this->asPhp($params).') ?]', $params) ?>
 

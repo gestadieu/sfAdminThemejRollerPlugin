@@ -60,6 +60,8 @@ class Base<?php echo ucfirst($this->getModuleName()) ?>GeneratorConfiguration ex
 <?php unset($this->config['filter']['class']) ?>
   }
 
+<?php include dirname(__FILE__).'/showConfiguration.php' ?>
+
 <?php include dirname(__FILE__).'/filtersConfiguration.php' ?>
 
 <?php include dirname(__FILE__).'/paginationConfiguration.php' ?>
