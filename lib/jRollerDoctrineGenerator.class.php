@@ -5,7 +5,7 @@ class jRollerDoctrineGenerator extends sfDoctrineGenerator
   /**
    * Gets extra parameters for jRoller plugin.
    *
-   * @return string
+   * @return mixed
    */
   public function getExtra($value = false)
   {
