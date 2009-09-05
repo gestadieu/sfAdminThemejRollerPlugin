@@ -42,6 +42,8 @@ That's it! You are ready to use your new admin generator face.
 
 ## Configuration
 
+### 1. jQuery related configuration
+
 You can use your own jQuery/jQueryUI and your own theme (based on ThemeRoller) and configure all this inside your *app.yml*:
 
 	sf_admin_theme_jroller_plugin:
@@ -65,6 +67,33 @@ To add icons on your buttons/links you can use those proposed by ThemeRoller and
 
 Note: you only need to use the specific part of each icon name, not the all name, e.g. for 'ui-icon-plus' you only type 'plus'.
 
+### 2. Extra features configuration
+
+This plugin add as well some new features. Currently available:
+
+* 'extra': a parameter to switch on/off one by one all new features.
+* 'show': add a show view, similar to the 'edit' view but no editable values only plain text is display.
+
+#### 2.1 Extra parameter
+
+	param:
+		theme:		jroller
+		extra:		[show, print, export]
+	
+Note: currently only the show extra feature is available.
+
+#### 2.2 Show view
+
+In your generator.yml file you can now add at the same level of 'list', 'edit' and so on, the following:
+
+	config:
+		list: ~
+		show:
+			title: ...
+			display: ...
+			actions: ...
+
+
 ## Links
 
 * [jQuery library](http://jquery.com/)
@@ -74,6 +103,7 @@ Note: you only need to use the specific part of each icon name, not the all name
 
 ## Changelog
 
+* version 0.1.4: add a 'show' view parameter for generator.yml. Default on link (when you specify =yourfield). It can also be added as a button on the object action list. To use this you must use the new jRollerDoctrineGenerator class in your generator.yml file instead of the default sfDoctrineGenerator.
 * version 0.1.3: THIS VERSION BRAKES PREVIOUS app.yml config. Modify the app.yml to make it more in line with "standard" plugins and add one new parameter: theme_dir to easily set external theme without changing jquery. Remove 2 themes to keep only one in the plugin (add your own in your web folder).
 * version 0.1.2: remove depreciated sfLoader inside UIHelper class. Add README.markdown.
 * version 0.1.1: README file fix and more documentation. Add [github repository](http://github.com/gestadieu/sfAdminThemejRollerPlugin/).
@@ -83,6 +113,6 @@ Note: you only need to use the specific part of each icon name, not the all name
 
 * fix bugs (no kidding ;-)
 * clean up css
-* add new features: show view, print view, export and , live search
+* add new features: print view, export and , live search
 * setup a live demo
 * rule the world, do good not evil
