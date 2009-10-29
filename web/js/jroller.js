@@ -1,11 +1,31 @@
 jQuery().ready(function(){	
 
-	//all hover and click logic for UI buttons
-	$(".sf_button:not(.ui-state-disabled)")
-	.hover( 
-		function(){ $(this).removeClass('ui-state-default').addClass("ui-state-hover"); },
-		function(){ $(this).removeClass("ui-state-hover").addClass('ui-state-default'); }
-	);
+	// all hover and click logic for UI buttons
+  // $(".sf_button:not(.ui-state-disabled)").hover( 
+  //  function(){$(this).removeClass('ui-state-default').addClass("ui-state-hover");},
+  //  function(){$(this).removeClass("ui-state-hover").addClass('ui-state-default');}
+  // );
+
+  // all hover and click logic for buttons
+  $(".fg-button:not(.ui-state-disabled)")
+  .hover(
+      function(){
+          $(this).addClass("ui-state-hover");
+      },
+      function(){
+          $(this).removeClass("ui-state-hover");
+      }
+  )
+  .mousedown(function(){
+          $(this).parents('.fg-buttonset-single:first').find(".fg-button.ui-state-active").removeClass("ui-state-active");
+          if( $(this).is('.ui-state-active.fg-button-toggleable, .fg-buttonset-multi .ui-state-active') ){$(this).removeClass("ui-state-active");}
+          else {$(this).addClass("ui-state-active");}
+  })
+  .mouseup(function(){
+      if(! $(this).is('.fg-button-toggleable, .fg-buttonset-single .fg-button,  .fg-buttonset-multi .fg-button') ){
+          $(this).removeClass("ui-state-active");
+      }
+  });
 
 	/*
 		Javascript for list view only
@@ -50,13 +70,13 @@ jQuery().ready(function(){
 		});
 
 		// toggle table visibility on caption title
-		$('.sf_admin_list caption h1').click(function(){ $('.sf_admin_list table tbody,.sf_admin_list table thead,.sf_admin_list table tfoot').toggle()});
+		$('.sf_admin_list caption h1').click(function(){$('.sf_admin_list table tbody,.sf_admin_list table thead,.sf_admin_list table tfoot').toggle()});
 		
 		// mouseover and click on table row
 		$('.sf_admin_list table tbody tr')
 			.hover(
-				function(){	$(this).addClass('ui-state-hover') },
-				function() { $(this).removeClass('ui-state-hover') }
+				function(){$(this).addClass('ui-state-hover')},
+				function() {$(this).removeClass('ui-state-hover')}
 			)
 		.click(function(e) {
 			// change row color
@@ -66,15 +86,36 @@ jQuery().ready(function(){
 			if ($(this).hasClass('ui-state-highlight')) $(chx).attr('checked','checked');
 			else $(chx).removeAttr('checked');
 		});
+
+    //
+    $('.sf_admin_batch_actions_choice select').selectmenu({
+      style: 'dropdown',
+      width: 200
+    });
 	}
-	
+
 	/*
 		Javascript for form view only
 	*/
 	if ($('.sf_admin_form').length)
 	{
-		// tabs for form edition
-		$('#sf_admin_form_tab_menu').tabs();
+    // tabs for form edition
+    $('#sf_admin_form_tab_menu').tabs().addClass('ui-tabs-vertical ui-helper-clearfix');
+    $('#sf_admin_form_tab_menu li').removeClass('ui-corner-top').addClass('ui-corner-all');
+
+    // default size for input
+    $('input[type="text"]').each(function(){
+      if ($(this).attr('size') == 0 || $(this).attr('size') == 20) {
+        $(this).attr({ size: 60 });
+      }
+    });
+
+    // default size for textarea
+    $('textarea').each(function(){
+      if ($(this).attr('rows') == 4 && $(this).attr('cols') == 30) {
+        $(this).attr({ cols: 59, rows: 5 });
+      }
+    });
 	}
 
 });

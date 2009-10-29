@@ -11,7 +11,7 @@
       [?php echo $form[$name]->render($attributes instanceof sfOutputEscaper ? $attributes->getRawValue() : $attributes) ?]
 
       [?php if ($help || $help = $form[$name]->renderHelp()): ?]
-        <div class="help">[?php echo __($help, array(), '<?php echo $this->getI18nCatalogue() ?>') ?]</div>
+        <div class="help">[?php echo __(strip_tags($help), array(), '<?php echo $this->getI18nCatalogue() ?>') ?]</div>
       [?php endif; ?]
     </div>
   </div>

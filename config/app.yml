@@ -5,3 +5,20 @@ all:
     theme_dir:  /sfAdminThemejRollerPlugin/css/jquery
     theme:      redmond
     css_reset:  true
+    list_actions_position: left
+    edit_tab:      vertical
+    icons:
+      new:        plus
+      filter:     check
+      filters:    search
+      reset:      circle-close
+      show:       document
+      edit:       pencil
+      delete:     trash
+      list:       arrowreturnthick-1-w
+      save:       circle-check
+      saveAndAdd: circle-plus
+      first:      seek-first
+      previous:   seek-prev
+      next:       seek-next
+      last:       seek-end

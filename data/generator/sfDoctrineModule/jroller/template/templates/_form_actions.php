@@ -1,12 +1,13 @@
-<ul class="sf_admin_actions">
+<ul class="sf_admin_actions_form">
 <?php foreach (array('new', 'edit') as $action): ?>
 <?php if ('new' == $action): ?>
 [?php if ($form->isNew()): ?]
 <?php else: ?>
 [?php else: ?]
 <?php endif; ?>
-<?php foreach ($this->configuration->getValue($action.'.actions') as $name => $params): 
-		$params['params'] = UIHelper::addClasses($params,'ui-state-default');
+<?php foreach ($this->configuration->getValue($action.'.actions') as $name => $params):
+        if (!key_exists('ui-icon', $params)) $params['ui-icon'] = '';
+		$params['params'] = UIHelper::addClasses($params);
 ?>
 <?php if ('_list' == $name): ?>
   <?php echo $this->addCredentialCondition('[?php echo $helper->linkToList('.$this->asPhp($params).') ?]', $params) ?>

@@ -1,43 +1,11 @@
-/* buttons  styling */
-.sf_button { 
-/*	clear:left; margin:0 4px 40px 20px; padding: .4em 1em; text-decoration:none !important; cursor:pointer; position: relative; text-align: center; zoom: 1; */
-   outline: 0; 
-   margin:0 4px 0 0; 
-   padding: .4em .4em; 
-   text-decoration:none !important; 
-   cursor:pointer; 
-   position: relative; 
-   text-align: center; 
-   zoom: 1; 
-}
-.fg-menu .sf_button {
-	text-align: left;
-}
-.fg-menu .sf_button-icon-left { text-indent: 20px;}
+.floatleft { float: left; }
+.floatright { float: right; }
 
-
-.sf_button .ui-icon { position: absolute; top: 50%; margin-top: -8px; left: 50%; margin-left: -8px; }
-/*a.sf_button { float: left;}*/
-button.sf_button { width: auto; overflow: visible;}
-
-.sf_button-icon-left { padding-left: 2.1em; }
-.sf_button-icon-right { padding-right: 2.1em; }
-.sf_button-icon-left .ui-icon { right: auto; left: .2em; margin-left: 0; }
-.sf_button-icon-right .ui-icon { left: auto; right: .2em; margin-right: 0; }
-.sf_button-icon-solo { display: block; width: 8px; text-indent: -9999px;}
-.sf_button.ui-state-loading .ui-icon { background: url(spinner_bar.gif) no-repeat 0 0;}
-
-.sf_button_inline {
-	padding-top: 1px;padding-bottom: 1px;
-/*	padding: .4em .4em;*/
-/*	text-indent: -99999px;*/
-	
-}
+.fg-menu .fg-button { text-align: left; }
+.fg-menu .fg-button-icon-left { text-indent: 1.8em; }
 
 /* flash messages */
-.sf_admin_flashes {
-	margin-bottom: 10px;
-}
+.sf_admin_flashes { margin: 10px 0; }
 .sf_admin_flashes div.ui-state-error, .sf_admin_flashes div.ui-state-highlight, .sf_admin_flashes div.ui-state-success {
 	padding: 10px;
 }
@@ -56,15 +24,22 @@ button.sf_button { width: auto; overflow: visible;}
 .sf_admin_filter br { display: none; }
 .sf_admin_filter td { padding-bottom: 10px;}
 
-#sf_admin_filter_button {
+#sf_admin_filters_buttons {
+  float: right;
+  margin: 0 5px 0 0;
+}
+/*#sf_admin_filter_button {
 	float: right;
 	padding: 2px;
-}
+}*/
+
 /*
 	sf_admin_form
 */
+.sf_admin_edit { padding: .2em; }
 #sf_admin_form_tab_menu {
-	margin-top: 10px;
+	margin: 10px 0;
+    border: 0;
 }
 #sf_admin_form_tab_menu label { 
 	display: block;
@@ -72,16 +47,16 @@ button.sf_button { width: auto; overflow: visible;}
 	font-weight: bold;
 	font-size: 1.2em;
 }
+#sf_admin_form_tab_menu .ui-tabs-panel { border-width: 1px; }
 
 .sf_admin_text input, textarea, select {margin:0.5em 0;border:1px solid #bbb;}
 .sf_admin_text input[type=text]:focus, textarea:focus, select:focus {border:1px solid #666;}
-.sf_admin_text input[type=text] {width:200px;padding:3px;}
+.sf_admin_text input[type=text] {/*width:200px;*/padding:3px;}
 .sf_admin_filter input[type=text] { margin-right: 20px;}
 
 .help {
 	color:#666;
 	font-style: italic;
-	text-indent: 10px;
 }
 .sf_admin_filter .help span.ui-icon.ui-icon-info {
 /*	display: inline;*/
@@ -103,20 +78,29 @@ button.sf_button { width: auto; overflow: visible;}
 }
 
 .sf_admin_list caption {
-	width: 100%; 
-	padding: 4px;
+  padding: 4px;
+	/*padding: 4px 4px 8px;
+  padding: 4px 0 0 0;
+  margin: 0;
+  height: 30px;*/
 }
 
-#sf_admin_container .sf_admin_list caption h1 {
+#sf_admin_container {
+  position: relative;
+  padding-bottom: .5em;
+}
+
+#sf_admin_container .ui-widget-header h1 {
 	font-size: 1.4em;
 	background: none;
 	font-weight: inherit;
 	font-style: inherit;
 	color: inherit;
 	text-align: left;
-	margin: 0px;
+	margin: 0;
 	cursor: pointer;
-	margin: 0px; padding: 0px;
+	margin: 0;
+    padding: 2px 0 0 0;
 }
 
 .sf_admin_list caption .ui-icon {
@@ -129,9 +113,13 @@ button.sf_button { width: auto; overflow: visible;}
 }
 
 .sf_admin_list table thead tr th {
-	padding: 5px;
+	padding: 1px 5px;
 	font-size: 1.1em;
+    white-space: nowrap;
 }
+
+.sf_admin_list table thead a { display: block; padding: 5px 0; }
+  .sf_admin_list table thead a .ui-icon { float: right; }
 
 #sf_admin_container .sf_admin_list table tfoot, 
 #sf_admin_container .sf_admin_list table tfoot tr, 
@@ -165,17 +153,18 @@ button.sf_button { width: auto; overflow: visible;}
 
 .sf_admin_td_actions {
 	list-style-type: none;
+    white-space: nowrap;
 }
 .sf_admin_td_actions li {
-	display: inline;
+	display: block;
+    float: left;
 }
 
-/* list styling */
+/**
+ * List styling
+ */
 
-.sf_admin_actions_block {
-	text-align:right;
-	margin: 10px 0 10px 0;
-}
+.sf_admin_actions_block { margin: 10px 0; }
 
 .sf_admin_actions {
 	margin: 0;
@@ -186,3 +175,37 @@ button.sf_button { width: auto; overflow: visible;}
 .sf_admin_actions li {
 	display: inline;
 }
+
+.sf_admin_actions_form { float: right; margin-right: .2em !important; list-style-type: none; white-space: nowrap; }
+  .sf_admin_actions_form li { display: block; float: left; }
+    .sf_admin_actions_form li a,
+    .sf_admin_actions_form li button { margin: 0; }
+
+.sf_admin_actions_form .sf_admin_action_list { position: absolute; left: .4em; }
+
+
+/* pagination */
+#sf_admin_pager { width: 99%; margin: 0 auto; }
+  #sf_admin_pager td { width: 33%; }
+  #sf_admin_pager td.right { text-align: right; }
+  
+  #sf_admin_pager .sf_admin_pagination { width: auto; margin: 0 auto; }
+    #sf_admin_pager .sf_admin_pagination td { width: auto; white-space: nowrap; padding: 0 10px; }
+    #sf_admin_pager .sf_admin_pagination td.button { width: 30px; padding: 0; }
+      #sf_admin_pager .sf_admin_pagination td a { display: block; width: 18px; height: 18px; margin: 0 auto; }
+      #sf_admin_pager .sf_admin_pagination td input { border: 1px solid #bbb; padding: 2px 0; text-align: center; }
+
+
+.sf_admin_batch_actions_choice .ui-selectmenu {
+  float: left;
+  margin-right: 5px;
+}
+
+/* Vertical Tabs
+----------------------------------*/
+.ui-tabs-vertical .ui-tabs-nav { position: relative; padding: .2em .1em .2em .2em; float: left; width: 25%; }
+  .ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 99%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; }
+    .ui-tabs-vertical .ui-tabs-nav li a { display: block; width: 100%; }
+
+.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-selected { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; border-right-width: 1px; }
+.ui-tabs-vertical .ui-tabs-panel { float: left; width: 70%; padding: .5em 1%; margin: 0 0 0 2%; }

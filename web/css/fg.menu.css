@@ -84,9 +84,9 @@ Date:		September 2008
 .fg-menu a.ui-state-hover:visited,
 .fg-menu a.ui-state-hover:hover,
 .fg-menu a.ui-state-hover:active,
- .fg-menu a.ui-state-active:link,
- .fg-menu a.ui-state-active:visited,
- .fg-menu a.ui-state-active:hover,
+.fg-menu a.ui-state-active:link,
+.fg-menu a.ui-state-active:visited,
+.fg-menu a.ui-state-active:hover,
 .fg-menu a.ui-state-active:active { border-style: solid; font-weight: normal; }
 
 .fg-menu a span { display:block; cursor:pointer; }

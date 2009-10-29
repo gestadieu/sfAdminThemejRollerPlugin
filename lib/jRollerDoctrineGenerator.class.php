@@ -9,22 +9,28 @@ class jRollerDoctrineGenerator extends sfDoctrineGenerator
    */
   public function getExtra($value = false)
   {
-		if (isset($this->params['extra']))
-		{
-			if ($value)
-			{
-				foreach ($this->params['extra'] as $val)
-				{
-					if ($val == $value) return true;
-				}
-				return false;
-			}
-			else return $this->params['extra'];
-		}
-		else return array();
+    if (isset($this->params['extra']))
+    {
+      if ($value)
+      {
+        foreach ($this->params['extra'] as $val)
+        {
+          if ($val == $value) return true;
+        }
+        return false;
+      }
+      else
+      {
+        return $this->params['extra'];
+      }
+    }
+    else
+    {
+      return array();
+    }
   }
 
-	/**
+  /**
    * Returns HTML code for a field.
    *
    * @param sfModelGeneratorConfigurationField $field The field
@@ -58,12 +64,9 @@ class jRollerDoctrineGenerator extends sfDoctrineGenerator
 
     if ($field->isLink())
     {
-			$html = sprintf("link_to(%s, '%s', \$%s)", $html, $this->getUrlForAction(($this->getExtra('show') == true)?'show':'edit'), $this->getSingularName());
+      $html = sprintf("link_to(%s, '%s', \$%s)", $html, $this->getUrlForAction(($this->getExtra('show') == true)?'show':'edit'), $this->getSingularName());
     }
 
     return $html;
   }
-
 }
-
-?>
