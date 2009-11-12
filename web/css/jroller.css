@@ -4,202 +4,127 @@
 .fg-menu .fg-button { text-align: left; }
 .fg-menu .fg-button-icon-left { text-indent: 1.8em; }
 
+.sf_admin_actions { margin: 0; padding: 0; list-style-type: none; }
+  .sf_admin_actions li { display: inline; }
+
 /* flash messages */
 .sf_admin_flashes { margin: 10px 0; }
 .sf_admin_flashes div.ui-state-error, .sf_admin_flashes div.ui-state-highlight, .sf_admin_flashes div.ui-state-success {
 	padding: 10px;
 }
 
-/*
-	Filters box
-*/
-.sf_admin_filter {
-	width: 50%;
-	margin: 0 auto;
-}
-
-.sf_admin_filter table {
-	width: 100%;
-}
-.sf_admin_filter br { display: none; }
-.sf_admin_filter td { padding-bottom: 10px;}
-
-#sf_admin_filters_buttons {
-  float: right;
-  margin: 0 5px 0 0;
-}
-/*#sf_admin_filter_button {
-	float: right;
-	padding: 2px;
-}*/
-
-/*
-	sf_admin_form
-*/
-.sf_admin_edit { padding: .2em; }
-#sf_admin_form_tab_menu {
-	margin: 10px 0;
-    border: 0;
-}
-#sf_admin_form_tab_menu label { 
-	display: block;
-	margin-top: 10px;
-	font-weight: bold;
-	font-size: 1.2em;
-}
-#sf_admin_form_tab_menu .ui-tabs-panel { border-width: 1px; }
-
-.sf_admin_text input, textarea, select {margin:0.5em 0;border:1px solid #bbb;}
-.sf_admin_text input[type=text]:focus, textarea:focus, select:focus {border:1px solid #666;}
-.sf_admin_text input[type=text] {/*width:200px;*/padding:3px;}
-.sf_admin_filter input[type=text] { margin-right: 20px;}
-
-.help {
-	color:#666;
-	font-style: italic;
-}
-.sf_admin_filter .help span.ui-icon.ui-icon-info {
-/*	display: inline;*/
-}
-
-/* table widget  */
-.sf_admin_list {
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-.sf_admin_list table{
-	clear: both;
-	width: 100%;
-	border-collapse:	collapse;;
-}
-
-.sf_admin_list table a {
-	text-decoration: none;
-}
-
-.sf_admin_list caption {
-  padding: 4px;
-	/*padding: 4px 4px 8px;
-  padding: 4px 0 0 0;
-  margin: 0;
-  height: 30px;*/
-}
-
-#sf_admin_container {
-  position: relative;
-  padding-bottom: .5em;
-}
-
-#sf_admin_container .ui-widget-header h1 {
-	font-size: 1.4em;
-	background: none;
-	font-weight: inherit;
-	font-style: inherit;
-	color: inherit;
-	text-align: left;
-	margin: 0;
-	cursor: pointer;
-	margin: 0;
+#sf_admin_container { position: relative; padding-bottom: .5em; }
+  #sf_admin_container .ui-widget-header h1 {
+    font-size: 1.4em;
+    background: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+    margin: 0;
     padding: 2px 0 0 0;
-}
+  }
 
-.sf_admin_list caption .ui-icon {
-	float: right;
-}
-
-.sf_admin_list caption h1 span.ui-icon.ui-icon-triangle-1-s {
-	float: left;
-	margin-right: 6px;
-}
-
-.sf_admin_list table thead tr th {
-	padding: 1px 5px;
-	font-size: 1.1em;
-    white-space: nowrap;
-}
-
-.sf_admin_list table thead a { display: block; padding: 5px 0; }
-  .sf_admin_list table thead a .ui-icon { float: right; }
-
-#sf_admin_container .sf_admin_list table tfoot, 
-#sf_admin_container .sf_admin_list table tfoot tr, 
-#sf_admin_container .sf_admin_list table tfoot tr th {
-	border: none;
-	margin: 0px;
-	padding: 0px;
-	background: none;
-}
-
-#sf_admin_container .sf_admin_list table tfoot div {
-	padding: 5px; margin: 0px;
-	text-align: right;
-}
-
-.sf_admin_list table tbody tr.sf_admin_row:hover {
-	font-weight: normal;
-}
-.sf_admin_list table tbody tr.sf_admin_row td {
-	border-right-width: 1px;
-	border-right-style: inherit;
-	border-right-color: inherit;
-	border-bottom-width: 1px;
-	border-bottom-style: inherit;
-	border-bottom-color: inherit;
-	padding: 4px;
-	margin: 0px;
-	text-align:left;
-	overflow:hidden;
-}
-
-.sf_admin_td_actions {
-	list-style-type: none;
-    white-space: nowrap;
-}
-.sf_admin_td_actions li {
-	display: block;
-    float: left;
-}
-
-/**
- * List styling
- */
-
+/*
+  List styling
+*/
 .sf_admin_actions_block { margin: 10px 0; }
 
-.sf_admin_actions {
-	margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
+/* sf_admin_list */
+.sf_admin_list { margin: 10px 0; }
+  .sf_admin_list table { clear: both; width: 100%; border-collapse: collapse; }
+    .sf_admin_list table a { text-decoration: none; }
 
-.sf_admin_actions li {
-	display: inline;
-}
+    /* table caption */
+    .sf_admin_list table caption { padding: 4px; }
+      .sf_admin_list table caption .ui-icon { float: right; }
+      .sf_admin_list table caption h1 span.ui-icon.ui-icon-triangle-1-s { float: left; margin-right: 6px; }
 
-.sf_admin_actions_form { float: right; margin-right: .2em !important; list-style-type: none; white-space: nowrap; }
-  .sf_admin_actions_form li { display: block; float: left; }
-    .sf_admin_actions_form li a,
-    .sf_admin_actions_form li button { margin: 0; }
+    /* table head */
+    .sf_admin_list table thead tr th { padding: 1px 5px; font-size: 1.1em; white-space: nowrap; }
+    .sf_admin_list table thead a { display: block; padding: 5px 0; }
+      .sf_admin_list table thead a .ui-icon { float: right; }
 
-.sf_admin_actions_form .sf_admin_action_list { position: absolute; left: .4em; }
+    /* table foot */
+    .sf_admin_list table tfoot, 
+    .sf_admin_list table tfoot tr, 
+    .sf_admin_list table tfoot tr th { border: 0; margin: 0; padding: 0; background: 0; }
+      .sf_admin_list table tfoot div { padding: 5px; margin: 0; text-align: right; }
 
+    /* table content */
+    .sf_admin_list table tbody tr.sf_admin_row:hover { font-weight: normal; }
+      .sf_admin_list table tbody tr.sf_admin_row td {
+      	border-right-width: 1px;
+      	border-right-style: inherit;
+      	border-right-color: inherit;
+      	border-bottom-width: 1px;
+      	border-bottom-style: inherit;
+      	border-bottom-color: inherit;
+      	padding: 4px;
+      	margin: 0;
+      	text-align: left;
+      	overflow: hidden;
+      }
+
+      /* table actions */
+      .sf_admin_td_actions { list-style-type: none; white-space: nowrap; }
+        .sf_admin_td_actions li { display: block; float: left; }
 
 /* pagination */
 #sf_admin_pager { width: 99%; margin: 0 auto; }
   #sf_admin_pager td { width: 33%; }
   #sf_admin_pager td.right { text-align: right; }
-  
+
   #sf_admin_pager .sf_admin_pagination { width: auto; margin: 0 auto; }
     #sf_admin_pager .sf_admin_pagination td { width: auto; white-space: nowrap; padding: 0 10px; }
     #sf_admin_pager .sf_admin_pagination td.button { width: 30px; padding: 0; }
       #sf_admin_pager .sf_admin_pagination td a { display: block; width: 18px; height: 18px; margin: 0 auto; }
       #sf_admin_pager .sf_admin_pagination td input { border: 1px solid #bbb; padding: 2px 0; text-align: center; }
 
+/* list select menu */
+.sf_admin_batch_actions_choice .ui-selectmenu { float: left; margin-right: 5px; }
 
-.sf_admin_batch_actions_choice .ui-selectmenu {
-  float: left;
-  margin-right: 5px;
-}
+
+/*
+  Filters box
+*/
+.sf_admin_filter { width: 50%; margin: 0 auto; }
+  .sf_admin_filter table { width: 100%; }
+    .sf_admin_filter td { padding-bottom: 10px; }
+  .sf_admin_filter br { display: none; }
+
+#sf_admin_filters_buttons { float: right; margin: 0 5px 0 0; }
+
+
+/*
+  sf_admin_form
+*/
+.sf_admin_edit { padding: .2em; }
+
+  /* actions (save, delete, etc.) */
+  .sf_admin_actions_form { float: right; margin-right: .2em !important; list-style-type: none; white-space: nowrap; }
+    .sf_admin_actions_form li { display: block; float: left; }
+      .sf_admin_actions_form li a,
+      .sf_admin_actions_form li button { margin: 0; }
+
+    /* return to list button */
+    .sf_admin_actions_form .sf_admin_action_list { position: absolute; left: .4em; }
+
+  /* fieldsets tab menu */
+  #sf_admin_form_tab_menu { margin: 10px 0; border: 0; }
+    #sf_admin_form_tab_menu label { display: block; margin-top: 10px; font-weight: bold; font-size: 1.2em; }
+    #sf_admin_form_tab_menu .ui-tabs-panel { border-width: 1px; }
+
+  /* default inputs styles */
+  .sf_admin_text input, textarea, select { margin: 0.5em 0; border: 1px solid #bbb;}
+  .sf_admin_text input[type=text]:focus, textarea:focus, select:focus { border: 1px solid #666; }
+  .sf_admin_text input[type=text] { padding: 3px; }
+  .sf_admin_filter input[type=text] { margin-right: 20px; }
+
+  /* help message */
+  .help { color: #666; font-style: italic; line-height: 1.6em; padding-left: 5px; text-indent: 5px; }
+
 
 /* Vertical Tabs
 ----------------------------------*/
