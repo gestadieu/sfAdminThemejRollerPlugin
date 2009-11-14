@@ -8,7 +8,7 @@
   .sf_admin_actions li { display: inline; }
 
 /* flash messages */
-.sf_admin_flashes { margin: 10px 0; }
+.sf_admin_flashes { margin: 10px 0; font-size: 1.15em; font-weight: bold; }
 .sf_admin_flashes div.ui-state-error, .sf_admin_flashes div.ui-state-highlight, .sf_admin_flashes div.ui-state-success {
 	padding: 10px;
 }
