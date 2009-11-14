@@ -113,17 +113,44 @@
 
   /* fieldsets tab menu */
   #sf_admin_form_tab_menu { margin: 10px 0; border: 0; }
-    #sf_admin_form_tab_menu label { display: block; margin-top: 10px; font-weight: bold; font-size: 1.2em; }
     #sf_admin_form_tab_menu .ui-tabs-panel { border-width: 1px; }
 
   /* default inputs styles */
-  .sf_admin_text input, textarea, select { margin: 0.5em 0; border: 1px solid #bbb;}
-  .sf_admin_text input[type=text]:focus, textarea:focus, select:focus { border: 1px solid #666; }
-  .sf_admin_text input[type=text] { padding: 3px; }
+  .sf_admin_text input, textarea, select { margin: 0.5em 0; border: 2px solid #bbb; }
+  .sf_admin_text input[type=text]:focus, .sf_admin_text input[type=password]:focus, textarea:focus, select:focus {
+    border-color: #333;
+  }
+  .sf_admin_text input[type=text], .sf_admin_text input[type=password], textarea { padding: 3px 5px; }
   .sf_admin_filter input[type=text] { margin-right: 20px; }
 
-  /* help message */
-  .help { color: #666; font-style: italic; line-height: 1.6em; padding-left: 5px; text-indent: 5px; }
+  /* form element */
+  .sf_admin_form_row { padding: 5px 9px; margin-bottom: 5px; }
+
+    /* form label */
+    .sf_admin_form_row .label label { float: left; font-size: 1.2em; font-weight: bold; margin-right: 15px; }
+      /* help message */
+      .help { color: #666; font-style: italic; line-height: 1.8em; padding-left: 5px; text-indent: 5px; }
+        .help .ui-icon { position: relative; margin-top: 1px; }
+
+    /* checkbox & radio list */
+    .checkbox_list, .radio_list { list-style: none; }
+      .checkbox_list label, .radio_list label { padding-left: 5px; font-weight: normal; }
+
+    /* dates styles */
+    .sf_admin_date select,
+    .sf_admin_form_field_date select,
+    .sf_admin_form_field_time select,
+    .sf_admin_form_field_daterange select { margin: 0 3px; }
+      .sf_admin_date option,
+      .sf_admin_form_field_date option,
+      .sf_admin_form_field_time option,
+      .sf_admin_form_field_daterange option { padding-right: 15px; }
+
+    /**/
+    .errors { padding-left: 5px; font-size: 1.05em; }
+      .error_list { list-style: none; font-weight: bold; text-indent: 5px; }
+
+  .focused { padding: 4px 8px; /*background: #FFF7C0; -moz-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.15);*/ }
 
 
 /* Vertical Tabs
@@ -133,4 +160,4 @@
     .ui-tabs-vertical .ui-tabs-nav li a { display: block; width: 100%; }
 
 .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-selected { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; border-right-width: 1px; }
-.ui-tabs-vertical .ui-tabs-panel { float: left; width: 70%; padding: .5em 1%; margin: 0 0 0 2%; }
+.ui-tabs-vertical .ui-tabs-panel { float: left; width: 70%; padding: 1em 1%; margin: 0 0 0 2%; }

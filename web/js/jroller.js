@@ -74,10 +74,14 @@ jQuery().ready(function(){
 		
 		// mouseover and click on table row
 		$('.sf_admin_list table tbody tr')
-			.hover(
-				function(){$(this).addClass('ui-state-hover')},
-				function() {$(this).removeClass('ui-state-hover')}
-			)
+		.hover(
+			function() {
+			  $(this).addClass('ui-state-hover');
+			},
+			function() {
+			  $(this).removeClass('ui-state-hover');
+			}
+		)
 		.click(function(e) {
 			// change row color
 			$(this).toggleClass('ui-state-highlight');
@@ -104,7 +108,7 @@ jQuery().ready(function(){
     $('#sf_admin_form_tab_menu li').removeClass('ui-corner-top').addClass('ui-corner-all');
 
     // default size for input
-    $('input[type="text"]').each(function(){
+    $('input[type="text"], input[type="password"]').each(function(){
       if ($(this).attr('size') == 0 || $(this).attr('size') == 20) {
         $(this).attr({ size: 60 });
       }
@@ -113,9 +117,22 @@ jQuery().ready(function(){
     // default size for textarea
     $('textarea').each(function(){
       if ($(this).attr('rows') == 4 && $(this).attr('cols') == 30) {
-        $(this).attr({ cols: 59, rows: 5 });
+        $(this).attr({ cols: 58, rows: 5 });
       }
     });
+
+    // 
+    $(':input')
+    .focus(function() {
+			//$(this).closest('.sf_admin_form_row').addClass('focused ui-state-active ui-corner-all');
+			//$(this).closest('.sf_admin_form_row').addClass('focused ui-state-default ui-corner-all');
+			$(this).closest('.sf_admin_form_row:not(.ui-state-error)').addClass('focused ui-state-highlight ui-corner-all');
+		})
+		.blur(function() {
+			//$(this).closest('.sf_admin_form_row').removeClass('focused ui-state-active ui-corner-all');
+			//$(this).closest('.sf_admin_form_row').removeClass('focused ui-state-default ui-corner-all');
+			$(this).closest('.sf_admin_form_row:not(.ui-state-error)').removeClass('focused ui-state-highlight ui-corner-all');
+		});
 	}
 
 });
