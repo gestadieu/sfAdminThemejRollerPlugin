@@ -121,7 +121,7 @@ jQuery().ready(function(){
       }
     });
 
-    // 
+    // added focused state to inputs
     $(':input')
     .focus(function() {
 			//$(this).closest('.sf_admin_form_row').addClass('focused ui-state-active ui-corner-all');
@@ -132,6 +132,11 @@ jQuery().ready(function(){
 			//$(this).closest('.sf_admin_form_row').removeClass('focused ui-state-active ui-corner-all');
 			//$(this).closest('.sf_admin_form_row').removeClass('focused ui-state-default ui-corner-all');
 			$(this).closest('.sf_admin_form_row:not(.ui-state-error)').removeClass('focused ui-state-highlight ui-corner-all');
+		});
+
+		// check error messages in all tabs
+		$('.ui-tabs-panel:has(span.ui-icon-alert)').each(function(i) {
+		  $('.ui-tabs-nav a[href=#' + this.id + ']').prepend('<span class="ui-state-error-text"><span class="ui-icon ui-icon-alert floatright"></span></span>');
 		});
 	}
 

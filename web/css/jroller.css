@@ -1,3 +1,5 @@
+html { overflow: -moz-scrollbars-vertical !important; }
+
 .floatleft { float: left; }
 .floatright { float: right; }
 
@@ -128,6 +130,7 @@
 
     /* form label */
     .sf_admin_form_row .label label { float: left; font-size: 1.2em; font-weight: bold; margin-right: 15px; }
+
       /* help message */
       .help { color: #666; font-style: italic; line-height: 1.8em; padding-left: 5px; text-indent: 5px; }
         .help .ui-icon { position: relative; margin-top: 1px; }
@@ -146,10 +149,11 @@
       .sf_admin_form_field_time option,
       .sf_admin_form_field_daterange option { padding-right: 15px; }
 
-    /**/
+    /* errors messages */
     .errors { padding-left: 5px; font-size: 1.05em; }
       .error_list { list-style: none; font-weight: bold; text-indent: 5px; }
 
+  /* form element focused */
   .focused { padding: 4px 8px; /*background: #FFF7C0; -moz-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.15);*/ }
 
 
@@ -157,7 +161,7 @@
 ----------------------------------*/
 .ui-tabs-vertical .ui-tabs-nav { position: relative; padding: .2em .1em .2em .2em; float: left; width: 25%; }
   .ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 99%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; }
-    .ui-tabs-vertical .ui-tabs-nav li a { display: block; width: 100%; }
+    .ui-tabs-vertical .ui-tabs-nav li a { display: block; float: none; }
 
 .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-selected { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; border-right-width: 1px; }
 .ui-tabs-vertical .ui-tabs-panel { float: left; width: 70%; padding: 1em 1%; margin: 0 0 0 2%; }
