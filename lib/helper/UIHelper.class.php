@@ -2,6 +2,10 @@
 
 class UIHelper 
 {
+  /**
+   * @var array $icons an array containing plugin icons configuration
+   * @static
+   */
   static protected $icons = null;
 
   /**
@@ -18,11 +22,6 @@ class UIHelper
     $uiClasses = sprintf('%s fg-button ui-state-default %s', $extra, $iconClass);
     $uiParams  = is_array($params['params']) ? $params['params'] : sfToolkit::stringToArray($params['params']);
     $uiParams['class'] = $uiClasses;
-
-    /*$iconClass = (isset($params['ui-icon'])) ?' sf_button-icon-left ' : '';
-    $uiClasses = sprintf(' %s sf_button %s ui-corner-all', $extra, $iconClass);
-    $uiParams  = is_array($params['params']) ? $params['params'] : sfToolkit::stringToArray($params['params']);
-    $uiParams['class'] = $uiClasses;*/
 
     return self::arrayToString($uiParams);
   }
@@ -57,6 +56,18 @@ class UIHelper
   }
 
   /**
+   * Adds an UI icon
+   *
+   * @param string $type Icon type
+   * @return string
+   * @static
+   */
+  static public function addIconByConf($type)
+  {
+    return self::addIcon(array('ui-icon' => self::getIcon($type)));
+  }
+
+  /**
    * Converts an associative array to a string
    *
    * @param array $params The associative array
@@ -88,9 +99,6 @@ class UIHelper
       self::$icons = sfConfig::get('app_sf_admin_theme_jroller_plugin_icons', array());
     }
 
-    if (!is_null($type))
-    {
-      return self::addIcon(array('ui-icon' => self::$icons[$type]));
-    }
+    return array_key_exists($type, self::$icons) ? self::$icons[$type] : '';
   }
 }

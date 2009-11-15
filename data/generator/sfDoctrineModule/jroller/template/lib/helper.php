@@ -20,6 +20,8 @@ class Base<?php echo ucfirst($this->getModuleName()) ?>GeneratorHelper extends s
 
   public function linkToNew($params)
   {
+    if (!key_exists('ui-icon', $params)) $params['ui-icon'] = '';
+    $params['params'] = UIHelper::addClasses($params, '');
     $params['ui-icon'] = $this->getIcon('new', $params);
     return '<li class="sf_admin_action_new">'.link_to(UIHelper::addIcon($params) . __($params['label'] , array(), 'sf_admin'), '@'.$this->getUrlForAction('new'), $params['params']).'</li>';
   }
@@ -74,16 +76,6 @@ class Base<?php echo ucfirst($this->getModuleName()) ?>GeneratorHelper extends s
 
   protected function getIcon($type, $params)
   {
-    return empty($params['ui-icon']) ? self::getIconConf($type) : $params['ui-icon'];
-  }
-
-  static protected function getIconConf($type)
-  {
-    if (is_null(self::$icons))
-    {
-      self::$icons = sfConfig::get('app_sf_admin_theme_jroller_plugin_icons', array());
-    }
-
-    return array_key_exists($type, self::$icons) ? self::$icons[$type] : '';
+    return empty($params['ui-icon']) ? UIHelper::getIcon($type) : $params['ui-icon'];
   }
 }

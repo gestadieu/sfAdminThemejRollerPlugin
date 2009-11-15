@@ -14,13 +14,13 @@ $last = $first + $pager->getMaxPerPage() - 1;
               [?php if ($pager->haveToPaginate()): ?]
               <td class="button">
                 <a href="[?php echo url_for('@<?php echo $this->getUrlForAction('list') ?>?page=1') ?]"[?php if ($pager->getPage() == 1) echo ' class="ui-state-disabled"' ?]>
-                  <?php echo UIHelper::getIcon('first') ?>
+                  <?php echo UIHelper::addIconByConf('first') ?>
                 </a>
               </td>
 
               <td class="button">
                 <a href="[?php echo url_for('@<?php echo $this->getUrlForAction('list') ?>?page='.$pager->getPreviousPage()) ?]"[?php if ($pager->getPage() == 1) echo ' class="ui-state-disabled"' ?]>
-                  <?php echo UIHelper::getIcon('previous') ?>
+                  <?php echo UIHelper::addIconByConf('previous') ?>
                 </a>
               </td>
 
@@ -32,13 +32,13 @@ $last = $first + $pager->getMaxPerPage() - 1;
 
               <td class="button">
                 <a href="[?php echo url_for('@<?php echo $this->getUrlForAction('list') ?>?page='.$pager->getNextPage()) ?]"[?php if ($pager->getPage() == $pager->getLastPage()) echo ' class="ui-state-disabled"' ?]>
-                  <?php echo UIHelper::getIcon('next') ?>
+                  <?php echo UIHelper::addIconByConf('next') ?>
                 </a>
               </td>
 
               <td class="button">
                 <a href="[?php echo url_for('@<?php echo $this->getUrlForAction('list') ?>?page='.$pager->getLastPage()) ?]"[?php if ($pager->getPage() == $pager->getLastPage()) echo ' class="ui-state-disabled"' ?]>
-                  <?php echo UIHelper::getIcon('last') ?>
+                  <?php echo UIHelper::addIconByConf('last') ?>
                 </a>
               </td>
               [?php endif; ?]
