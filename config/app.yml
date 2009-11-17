@@ -1,24 +1,50 @@
 all:
   sf_admin_theme_jroller_plugin:
-    web_dir:    /sfAdminThemejRollerPlugin
-    use_jquery: true
-    theme_dir:  /sfAdminThemejRollerPlugin/css/jquery
-    theme:      redmond
-    css_reset:  true
+    # specify the folder where to pick jQuery / jQuery UI / stylesheets
+    web_dir:        /sfAdminThemejRollerPlugin
+
+    # use the javascript packaged jQuery / jQuery UI of plugin
+    # you can turn use_jquery to false and include your own lib version
+    use_jquery:     true
+
+    # specify the jQuery UI theme folder
+    theme_dir:      /sfAdminThemejRollerPlugin/css/jquery
+
+    # ThemeRoller name
+    # (depends on theme_dir option)
+    # browse: http://jqueryui.com/themeroller/
+    theme:          redmond
+
+    # activates the jQuery UI widget to dynamically change theme
+    # (not yet implemented)
+    theme_switcher: false
+
+    # default. reset default CSS (from Blueprint CSS)
+    css_reset:      true
+
+    # drop-down menu actions in list view
+    # possible value: left or right
     list_actions_position: left
-    edit_tab:      vertical
+
+    # fieldsets as jQuery UI tabs in edit view
+    # possible value: horizontal or vertical
+    # (not yet implemented)
+    edit_tab_position: vertical
+
+    # icons for each buttons
+    # icon class as: ui-icon-value
     icons:
-      new:        plus
-      filter:     check
-      filters:    search
-      reset:      circle-close
-      show:       document
-      edit:       pencil
-      delete:     trash
-      list:       arrowreturnthick-1-w
-      save:       circle-check
-      saveAndAdd: circle-plus
-      first:      seek-first
-      previous:   seek-prev
-      next:       seek-next
-      last:       seek-end
+      new:          plus
+      filter:       check
+      filters:      search
+      reset:        circle-close
+      show:         document
+      edit:         pencil
+      delete:       trash
+      list:         arrowreturnthick-1-w
+      save:         circle-check
+      saveAndAdd:   circle-plus
+      first:        seek-first
+      previous:     seek-prev
+      next:         seek-next
+      last:         seek-end
