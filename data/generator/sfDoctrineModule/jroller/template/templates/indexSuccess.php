@@ -45,4 +45,6 @@
   <div id="sf_admin_footer">
     [?php include_partial('<?php echo $this->getModuleName() ?>/list_footer', array('pager' => $pager)) ?]
   </div>
+
+  [?php include_partial('<?php echo $this->getModuleName() ?>/themeswitcher') ?]
 </div>

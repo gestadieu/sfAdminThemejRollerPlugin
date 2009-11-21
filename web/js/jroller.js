@@ -1,10 +1,10 @@
 jQuery().ready(function(){	
 
-	// all hover and click logic for UI buttons
-  // $(".sf_button:not(.ui-state-disabled)").hover( 
-  //  function(){$(this).removeClass('ui-state-default').addClass("ui-state-hover");},
-  //  function(){$(this).removeClass("ui-state-hover").addClass('ui-state-default');}
-  // );
+	// theme switcher
+	if ($('#switcher').length)
+	{
+	  $('#switcher').themeswitcher();
+	}
 
   // all hover and click logic for buttons
   $(".fg-button:not(.ui-state-disabled)")

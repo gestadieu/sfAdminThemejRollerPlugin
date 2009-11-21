@@ -16,7 +16,7 @@ all:
     theme:          redmond
 
     # activates the jQuery UI widget to dynamically change theme
-    # (not yet implemented)
+    # http://jqueryui.com/docs/Theming/ThemeSwitcher
     theme_switcher: false
 
     # default. reset default CSS (from Blueprint CSS)
