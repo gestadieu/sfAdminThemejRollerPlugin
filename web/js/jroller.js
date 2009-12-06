@@ -1,10 +1,10 @@
 jQuery().ready(function(){	
 
-	// all hover and click logic for UI buttons
-  // $(".sf_button:not(.ui-state-disabled)").hover( 
-  //  function(){$(this).removeClass('ui-state-default').addClass("ui-state-hover");},
-  //  function(){$(this).removeClass("ui-state-hover").addClass('ui-state-default');}
-  // );
+	// theme switcher
+	if ($('#switcher').length)
+	{
+	  $('#switcher').themeswitcher();
+	}
 
   // all hover and click logic for buttons
   $(".fg-button:not(.ui-state-disabled)")
@@ -39,11 +39,11 @@ jQuery().ready(function(){
 		});
 		
 		// filter button to show the modal window of available filters
-		$('#sf_admin_filter_button a')
+		$('#sf_admin_filter_button')
 			.addClass('sf_button-toggleable')
-			.click(function() {
+			.click(function(e) {
+			  e.preventDefault();
 				$('.sf_admin_filter').dialog('isOpen') ? $('.sf_admin_filter').dialog('close') : $('.sf_admin_filter').dialog('open');
-				return false;
 			});
 
 		// modal window for filters
@@ -70,8 +70,10 @@ jQuery().ready(function(){
 		});
 
 		// toggle table visibility on caption title
-		$('.sf_admin_list caption h1').click(function(){$('.sf_admin_list table tbody,.sf_admin_list table thead,.sf_admin_list table tfoot').toggle()});
-		
+		$('.sf_admin_list caption h1').click(function(){
+		  $('.sf_admin_list table tbody, .sf_admin_list table thead, .sf_admin_list table tfoot').toggle();
+		});
+
 		// mouseover and click on table row
 		$('.sf_admin_list table tbody tr')
 		.hover(
@@ -91,7 +93,7 @@ jQuery().ready(function(){
 			else $(chx).removeAttr('checked');
 		});
 
-    //
+    // batch actions
     $('.sf_admin_batch_actions_choice select').selectmenu({
       style: 'dropdown',
       width: 200

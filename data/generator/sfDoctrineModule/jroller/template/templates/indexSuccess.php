@@ -31,7 +31,7 @@
       	</div>
       </div>
 
-      [?php include_partial('<?php echo $this->getModuleName() ?>/list', array('pager' => $pager, 'sort' => $sort, 'helper' => $helper, 'filters' => $filters)) ?]
+      [?php include_partial('<?php echo $this->getModuleName() ?>/list', array('pager' => $pager, 'sort' => $sort, 'helper' => $helper, 'hasFilters' => $hasFilters)) ?]
 
       <ul class="sf_admin_actions">
         [?php include_partial('<?php echo $this->getModuleName() ?>/list_batch_actions', array('helper' => $helper)) ?]
@@ -45,4 +45,6 @@
   <div id="sf_admin_footer">
     [?php include_partial('<?php echo $this->getModuleName() ?>/list_footer', array('pager' => $pager)) ?]
   </div>
+
+  [?php include_partial('<?php echo $this->getModuleName() ?>/themeswitcher') ?]
 </div>

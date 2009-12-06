@@ -96,7 +96,7 @@ html { overflow: -moz-scrollbars-vertical !important; }
     .sf_admin_filter td { padding-bottom: 10px; }
   .sf_admin_filter br { display: none; }
 
-#sf_admin_filters_buttons { float: right; margin: 0 5px 0 0; }
+#sf_admin_filters_buttons { float: right; margin: 0 5px 0 0; border: 0; background: 0; }
 
 
 /*

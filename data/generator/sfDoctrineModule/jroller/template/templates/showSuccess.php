@@ -13,4 +13,6 @@
   <div class="ui-helper-clearfix"></div>
 
   [?php include_partial('show', array('form' => $form, '<?php echo $this->getSingularName() ?>' => $<?php echo $this->getSingularName() ?>, 'configuration' => $configuration)) ?]
+
+  [?php include_partial('<?php echo $this->getModuleName() ?>/themeswitcher') ?]
 </div>
