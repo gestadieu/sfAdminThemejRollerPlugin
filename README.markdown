@@ -103,6 +103,7 @@ In your generator.yml file you can now add at the same level of 'list', 'edit' a
 
 ## Changelog
 
+* version 0.2.0: fix minor issues for compatibility with symfony 1.3 and 1.4. Live demo available at (http://symfony-planet.com/user)
 * version 0.1.4: add a 'show' view parameter for generator.yml. Default on link (when you specify =yourfield). It can also be added as a button on the object action list. To use this you must use the new jRollerDoctrineGenerator class in your generator.yml file instead of the default sfDoctrineGenerator.
 * version 0.1.3: THIS VERSION BRAKES PREVIOUS app.yml config. Modify the app.yml to make it more in line with "standard" plugins and add one new parameter: theme_dir to easily set external theme without changing jquery. Remove 2 themes to keep only one in the plugin (add your own in your web folder).
 * version 0.1.2: remove depreciated sfLoader inside UIHelper class. Add README.markdown.
@@ -114,5 +115,4 @@ In your generator.yml file you can now add at the same level of 'list', 'edit' a
 * fix bugs (no kidding ;-)
 * clean up css
 * add new features: print view, export and , live search
-* setup a live demo
 * rule the world, do good not evil
