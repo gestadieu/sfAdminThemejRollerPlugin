@@ -7,7 +7,7 @@ This plugin allows to change the default admin generator theme to one based on t
 It is very convenient to change themes and keep UI consistency all around or even create your own theme. This admin generator theme
 is only targeting the actual element of the admin generator (table, forms...), it does not modify your overall layout.
 
-Here are some screenshots: [Table list and themes](http://lh5.ggpht.com/_HlYBk55Czxc/SovPBjZPmsI/AAAAAAAAAyw/sp28Wi_hFCw/jroller-list-themes.png?imgmax=800) | [Filters and action menu](http://lh6.ggpht.com/_HlYBk55Czxc/SpIBG_3Mw4I/AAAAAAAAAy8/6YlRs4ciikM/jroller-list-filters.png?imgmax=800) | [Form](http://lh4.ggpht.com/_HlYBk55Czxc/SpICgt-bCwI/AAAAAAAAAzI/m107vadkdJg/jroller-form.png?imgmax=800)
+Here are some screenshots: [Table list and themes](http://lh5.ggpht.com/_HlYBk55Czxc/S1chcjbDuyI/AAAAAAAAA5E/SKG07o2hG1s/s720/jroller-v0.2-list.png) | [Filters and action menu](http://lh4.ggpht.com/_HlYBk55Czxc/S1chUnKe6iI/AAAAAAAAA5A/GVyDhrrQSWM/jroller-v0.2-filter.png) | [Form](http://lh4.ggpht.com/_HlYBk55Czxc/SpICgt-bCwI/AAAAAAAAAzI/m107vadkdJg/jroller-form.png?imgmax=800)
 
 ## Installation
 
