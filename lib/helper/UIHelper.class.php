@@ -18,8 +18,7 @@ class UIHelper
    */
   static public function addClasses(array $params, $extra = '')
   {
-    $iconClass = (isset($params['ui-icon'])) ? 'fg-button-icon-left' : '';
-    $uiClasses = sprintf('%s fg-button ui-state-default %s', $extra, $iconClass);
+    $uiClasses = sprintf('%s ui-state-default', $extra);
     $uiParams  = is_array($params['params']) ? $params['params'] : sfToolkit::stringToArray($params['params']);
     $uiParams['class'] = $uiClasses;
 
@@ -100,5 +99,14 @@ class UIHelper
     }
 
     return array_key_exists($type, self::$icons) ? self::$icons[$type] : '';
+  }
+  static public function getIconClass($type)
+  {
+    if($icon = self::getIcon($type))
+    {
+      $icon = 'ui-icon-' . $icon;
+    }
+
+    return $icon;
   }
 }
