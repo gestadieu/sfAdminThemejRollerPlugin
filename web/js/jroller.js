@@ -142,4 +142,24 @@ jQuery().ready(function(){
 		});
 	}
 
+    // Buttons
+    $('#sf_admin_filters_buttons')
+          .buttonset();
+    $('.sf_admin_actions_form a, .sf_admin_actions_form button, .sf_admin_td_actions a,  #sf_admin_filters_buttons a')
+      .each(function() {
+        $(this)
+          .button({
+          icons: {
+            // Extracts icon name from class attribute
+            primary: this.className.match(/ui-icon-[\S]+/)
+          }
+        })
+        // To create buttons with rounded corners remove the following line
+        .removeClass('ui-corner-all');
+
+        if($(this).hasClass('disabled'))
+        {
+          $(this).button('disable');
+        }
+      });
 });
