@@ -1,7 +1,9 @@
 .fg-button { outline: 0; margin: 0 4px 0 0; padding: .4em 1em; text-decoration: none !important; cursor: pointer; position: relative; text-align: center; zoom: 1; }
 .fg-button-mini { padding: .3em .5em .3em 0; }
+/*
+ Removed as it conflicts with jQuery UI 1.8 css
 .ui-button { outline: 0; margin: 0; padding: .3em 1em .2em; text-decoration: none !important; cursor: pointer; position: relative; text-align: center; }
-
+*/
 .fg-button .ui-icon { position: absolute; top: 50%; margin-top: -8px; left: 50%; margin-left: -8px; }
 
 a.fg-button { float: left; }
