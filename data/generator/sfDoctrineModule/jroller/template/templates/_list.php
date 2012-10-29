@@ -4,9 +4,9 @@
   <table>
     <caption class="fg-toolbar ui-widget-header ui-corner-top">
       <?php if ($this->configuration->hasFilterForm()): ?>
-      <div id="sf_admin_filters_buttons" class="fg-buttonset fg-buttonset-multi ui-state-default">
-        <a href="#sf_admin_filter" id="sf_admin_filter_button" class="fg-button ui-state-default fg-button-icon-left ui-corner-left">[?php echo UIHelper::addIconByConf('filters') . __('Filters', array(), 'sf_admin') ?]</a>
-        [?php echo link_to(UIHelper::addIconByConf('reset') . __('Reset', array(), 'sf_admin'), '<?php echo $this->getUrlForAction('collection') ?>', array('action' => 'filter'), array('query_string' => '_reset', 'method' => 'post', 'class' => 'fg-button ui-state-default fg-button-icon-left ui-corner-right')) ?]</span>
+      <div id="sf_admin_filters_buttons">
+        <a href="#sf_admin_filter" id="sf_admin_filter_button" class="ui-corner-left [?php echo UIHelper::getIconClass('filters')?]">[?php echo __('Filters', array(), 'sf_admin') ?]</a>
+        [?php echo link_to(__('Reset', array(), 'sf_admin'), '<?php echo $this->getUrlForAction('collection') ?>', array('action' => 'filter'), array('query_string' => '_reset', 'method' => 'post', 'class' => 'ui-corner-right '. UIHelper::getIconClass('reset'))) ?]</span>
       </div>
       <?php endif; ?>
       <h1><span class="ui-icon ui-icon-triangle-1-s"></span> [?php echo <?php echo $this->getI18NString('list.title') ?> ?]</h1>
@@ -25,10 +25,10 @@
   <table>
     <caption class="fg-toolbar ui-widget-header ui-corner-top">
       <?php if ($this->configuration->hasFilterForm()): ?>
-      <div id="sf_admin_filters_buttons" class="fg-buttonset fg-buttonset-multi ui-state-default">
-        <a href="#sf_admin_filter" id="sf_admin_filter_button" class="fg-button ui-state-default fg-button-icon-left ui-corner-left">[?php echo UIHelper::addIconByConf('filters') . __('Filters', array(), 'sf_admin') ?]</a>
-        [?php $isDisabledResetButton = ($hasFilters->getRawValue()) ? '' : ' ui-state-disabled' ?]
-        [?php echo link_to(UIHelper::addIconByConf('reset') . __('Reset', array(), 'sf_admin'), '<?php echo $this->getUrlForAction('collection') ?>', array('action' => 'filter'), array('query_string' => '_reset', 'method' => 'post', 'class' => 'fg-button ui-state-default fg-button-icon-left ui-corner-right'.$isDisabledResetButton)) ?]</span>
+      <div id="sf_admin_filters_buttons">
+        <a href="#sf_admin_filter" id="sf_admin_filter_button" class="ui-corner-left [?php echo UIHelper::getIconClass('filters')?]">[?php echo __('Filters', array(), 'sf_admin') ?]</a>
+        [?php $isDisabledResetButton = ($hasFilters->getRawValue()) ? '' : ' disabled' ?]
+        [?php echo link_to(__('Reset', array(), 'sf_admin'), '<?php echo $this->getUrlForAction('collection') ?>', array('action' => 'filter'), array('query_string' => '_reset', 'method' => 'post', 'class' =>  'ui-corner-right '.UIHelper::getIconClass('reset').$isDisabledResetButton)) ?]</span>
       </div>
       <?php endif; ?>
       <h1><span class="ui-icon ui-icon-triangle-1-s"></span> [?php echo <?php echo $this->getI18NString('list.title') ?> ?]</h1>

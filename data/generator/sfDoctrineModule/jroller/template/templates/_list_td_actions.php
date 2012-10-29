@@ -3,7 +3,7 @@
   <?php foreach ($this->configuration->getValue('list.object_actions') as $name => $params): ?>
     <?php
     if (!key_exists('ui-icon', $params)) $params['ui-icon'] = '';
-    $params['params'] = UIHelper::addClasses($params, 'fg-button-mini');
+    $params['params'] = UIHelper::addClasses($params);
     ?>
 
     <?php if ('_delete' == $name): ?>
